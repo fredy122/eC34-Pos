@@ -1,0 +1,67 @@
+body,html{
+	user-select: none;
+	height: 100%;
+}
+
+// Variables
+@import "variables";
+
+// Bootstrap 4
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.form-control-round{
+	border-radius: 22.5px;
+}
+
+.btn-round-lg{
+	border-radius: 22.5px;
+}
+.btn-round{
+	border-radius: 17px;
+}
+.btn-round-sm{
+	border-radius: 15px;
+}
+.btn-round-xs{
+	border-radius: 11px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+//toastr
+@import "node_modules/toastr/toastr.scss";
+
+// Scrollbar
+.containerMesas::-webkit-scrollbar,
+.listProd::-webkit-scrollbar,
+.listItems::-webkit-scrollbar,
+.scrollBarBig::-webkit-scrollbar,
+.contObs::-webkit-scrollbar, {
+    width: 2rem;
+    height: 2rem;
+}
+ 
+.containerMesas::-webkit-scrollbar-track,
+.listProd::-webkit-scrollbar-track,
+.listItems::-webkit-scrollbar-track,
+.scrollBarBig::-webkit-scrollbar-track,
+.contObs::-webkit-scrollbar-track, {
+	background: #e9ecef;
+}
+ 
+.containerMesas::-webkit-scrollbar-thumb,
+.listProd::-webkit-scrollbar-thumb,
+.listItems::-webkit-scrollbar-thumb,
+.scrollBarBig::-webkit-scrollbar-thumb,
+.contObs::-webkit-scrollbar-thumb, {
+	background: #888;
+}
+
+.containerMesas::-webkit-scrollbar-thumb:hover,
+.listProd::-webkit-scrollbar-thumb:hover,
+.listItems::-webkit-scrollbar-thumb:hover,
+.scrollBarBig::-webkit-scrollbar-thumb:hover,
+.contObs::-webkit-scrollbar-thumb:hover, {
+	background: #555;
+}
+

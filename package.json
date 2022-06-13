@@ -1,0 +1,37 @@
+{
+  "name": "laravel_electron",
+  "version": "1.0.0",
+  "description": "Making laravel desktop application using electron js",
+  "main": "main.js",
+  "engines": {
+    "node": ">=8.0"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laravelarticle/laravel-electron.git"
+  },
+  "keywords": [
+    "laravel",
+    "electron",
+    "desktop",
+    "application"
+  ],
+  "author": "laravelarticle",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^8.2.3",
+    "electron-packager": "^11.0.1"
+  },
+  "dependencies": {
+    "electron-dl": "^3.3.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "node-php-server": "^0.1.2"
+  },
+  "bugs": {
+    "url": "https://github.com/laravelarticle/laravel-electron/issues"
+  },
+  "homepage": "https://github.com/laravelarticle/laravel-electron#readme"
+}

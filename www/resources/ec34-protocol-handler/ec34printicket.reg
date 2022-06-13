@@ -1,0 +1,12 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\ec34printicket]
+@="URL:ec34printicket Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\ec34printicket\shell]
+
+[HKEY_CLASSES_ROOT\ec34printicket\shell\open]
+
+[HKEY_CLASSES_ROOT\ec34printicket\shell\open\command]
+@="\"D:\\e-C34\\printicket.exe\" \"\""
