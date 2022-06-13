@@ -3,6 +3,10 @@ const path = require('path')
 const electronDl = require('electron-dl');
 let progressInterval
 
+require('update-electron-app')()
+
+//esta si es la prueba final...
+
 const { clipboard } = require('electron')
 
 var net = require('net');
