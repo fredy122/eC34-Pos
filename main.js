@@ -3,10 +3,11 @@ const path = require('path')
 const electronDl = require('electron-dl');
 let progressInterval
 
+require('update-electron-app')({
+  updateInterval: '2 minutes',
+})
+
 const { clipboard } = require('electron')
-
-//modificacion de prueba en prueba2
-
 
 var net = require('net');
 var server = net.createServer();
