@@ -5,6 +5,8 @@ let progressInterval
 
 const { clipboard } = require('electron')
 
+//modificacion de prueba en prueba2
+
 
 var net = require('net');
 var server = net.createServer();
