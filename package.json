@@ -7,11 +7,11 @@
     "node": ">=8.0"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "set ELECTRON_IS_DEV=0 && electron ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laravelarticle/laravel-electron.git"
+    "url": "git+https://https://github.com/fredy122/eC34-Pos.git"
   },
   "keywords": [
     "laravel",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "electron-dl": "^3.3.0",
+    "electron-is-dev": "^2.0.0",
     "electron-squirrel-startup": "^1.0.0",
     "node-php-server": "^0.1.2",
     "update-electron-app": "^2.0.1"
