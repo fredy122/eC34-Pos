@@ -10,7 +10,9 @@ var server = net.createServer();
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
 
-require('update-electron-app');
+require('update-electron-app')({
+  updateInterval: '5 minutes'
+});
 
 const gotTheLock = app.requestSingleInstanceLock()
 
