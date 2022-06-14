@@ -3,15 +3,13 @@ const path = require('path')
 const electronDl = require('electron-dl');
 let progressInterval
 
-//esta si es la prueba final...
-
-const { clipboard } = require('electron')
-
 var net = require('net');
 var server = net.createServer();
 
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
+
+require('update-electron-app');
 
 const gotTheLock = app.requestSingleInstanceLock()
 
