@@ -5,7 +5,7 @@ let progressInterval
 
 var net = require('net');
 var server = net.createServer();
-//aki pondremos texto de prueba, segundo texo de prueba...
+//aki pondremos texto de prueba, segundo texo de prueba...borradoooooooo
 
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
