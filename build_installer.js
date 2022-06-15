@@ -35,6 +35,9 @@ const msiCreator = new MSICreator({
             background: BACKGROUND,
         },
     },
+    features: {
+        autoUpdate: true,
+    }
 });
 
 // 4. Create a .wxs template file
