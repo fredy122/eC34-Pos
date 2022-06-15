@@ -3,6 +3,8 @@ const path = require('path')
 const electronDl = require('electron-dl');
 let progressInterval
 
+require('update-electron-app')()
+
 var net = require('net');
 var server = net.createServer();
 //esta es la prueba 2

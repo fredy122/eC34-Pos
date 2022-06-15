@@ -30,7 +30,8 @@
   "dependencies": {
     "electron-dl": "^3.3.1",
     "electron-squirrel-startup": "^1.0.0",
-    "node-php-server": "^0.1.2"
+    "node-php-server": "^0.1.2",
+    "update-electron-app": "^2.0.1"
   },
   "bugs": {
     "url": "https://github.com/laravelarticle/laravel-electron/issues"
