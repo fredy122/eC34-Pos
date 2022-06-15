@@ -5,7 +5,7 @@ let progressInterval
 
 var net = require('net');
 var server = net.createServer();
-//aki pondremos texto de prueba, segundo texo de prueba...borradoooooooo
+//esta es la prueba 2
 
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
@@ -102,7 +102,6 @@ function createWindow() {
     mainWindow = null;
   })
 }
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
