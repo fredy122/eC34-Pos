@@ -5,7 +5,7 @@ let progressInterval
 
 var net = require('net');
 var server = net.createServer();
-//esta es la prueba 2
+//esta es la prueba 2 con servidor personal
 
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
