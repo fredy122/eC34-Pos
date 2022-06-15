@@ -10,10 +10,6 @@ var server = net.createServer();
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
 
-require('update-electron-app')({
-  updateInterval: '5 minutes'
-});
-
 const gotTheLock = app.requestSingleInstanceLock()
 
 //Usamos electronDl para descarga directa
@@ -60,7 +56,8 @@ function createWindow() {
         width: width,
         height: height,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
+            preload: path.join(__dirname, 'preload.js'),
+            enableRemoteModule: false,
         },
         show: false,
         autoHideMenuBar: true,
@@ -96,7 +93,7 @@ function createWindow() {
     mainWindow.webContents.once('dom-ready', function () {
         mainWindow.show()
         mainWindow.maximize();
-        // mainWindow.webContents.openDevTools()
+        mainWindow.webContents.openDevTools()
     });
 
   // Emitted when the window is closed.

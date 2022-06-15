@@ -22,16 +22,15 @@
   "author": "laravelarticle",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^8.2.3",
+    "electron": "^8.5.5",
+    "electron-builder": "^23.0.3",
     "electron-packager": "^11.0.1",
     "electron-wix-msi": "^4.0.0"
   },
   "dependencies": {
-    "electron-dl": "^3.3.0",
-    "electron-is-dev": "^2.0.0",
+    "electron-dl": "^3.3.1",
     "electron-squirrel-startup": "^1.0.0",
-    "node-php-server": "^0.1.2",
-    "update-electron-app": "^2.0.1"
+    "node-php-server": "^0.1.2"
   },
   "bugs": {
     "url": "https://github.com/laravelarticle/laravel-electron/issues"
