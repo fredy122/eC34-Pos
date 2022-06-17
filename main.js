@@ -11,10 +11,33 @@ const BrowserWindow = electron.BrowserWindow
 const app = electron.app
 const autoUpdater = electron.autoUpdater
 
-const server2 = "https://e-c34-cwqor9214-fredy122.vercel.app"
-const url = `${server2}/update/${process.platform}/${app.getVersion()}`
+const serverUpdate = "https://e-c34-l9q6dhho2-fredy122.vercel.app"
+const feed = `${serverUpdate}/update/${process.platform}/${app.getVersion()}`
+autoUpdater.setFeedURL(feed)
 
-autoUpdater.setFeedURL({ url })
+
+setInterval(() => {
+    autoUpdater.checkForUpdates()
+}, 60000)
+
+autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
+    const dialogOpts = {
+        type: 'info',
+        buttons: ['Restart', 'Ahora no. En el próximo reinicio'],
+        title: 'Update',
+        message: process.platform === 'win32' ? releaseNotes : releaseName,
+        detail: 'Se ha descargado una nueva versión. Reinicie ahora para completar la actualización.'
+    }
+
+    dialog.showMessageBox(dialogOpts).then((returnValue) => {
+        if (returnValue.response === 0) autoUpdater.quitAndInstall()
+    })
+})
+
+autoUpdater.on('error', message => {
+    console.error('Hubo un problema al actualizar la aplicación.')
+    console.error(message)
+})
 
 const gotTheLock = app.requestSingleInstanceLock()
 
