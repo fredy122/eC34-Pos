@@ -12,6 +12,7 @@ const APP_DIR = path.resolve(__dirname, './eC34-Pedidos-win32-x64');
 const OUT_DIR = path.resolve(__dirname, './windows_installer');
 const LOGO = path.resolve(__dirname, './logo.ico');
 const BACKGROUND = path.resolve(__dirname, './background.jpg');
+//const CERT = path.resolve(__dirname, './cert.pfx');
 
 // 3. Instantiate the MSICreator
 const msiCreator = new MSICreator({
@@ -37,7 +38,9 @@ const msiCreator = new MSICreator({
     },
     features: {
         autoUpdate: true,
-    }
+    },
+    //certificateFile: CERT,
+    //certificatePassword: '20602713TIS',
 });
 
 // 4. Create a .wxs template file
