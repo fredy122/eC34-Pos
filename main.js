@@ -12,7 +12,7 @@ const app = electron.app
 const autoUpdater = electron.autoUpdater
 const Notification = electron.Notification
 
-const serverUpdate = "https://e-c34-l9q6dhho2-fredy122.vercel.app"
+const serverUpdate = "https://e-c34-gr6bb22w5-fredy122.vercel.app"
 const feed = `${serverUpdate}/update/${process.platform}/${app.getVersion()}`
 autoUpdater.setFeedURL(feed)
 
@@ -35,11 +35,6 @@ autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
     })
 })
 
-autoUpdater.on('error', message => {
-    showNotification()
-})
-
-
 
 const NOTIFICATION_TITLE = 'Error'
 const NOTIFICATION_BODY = 'Hubo un problema al actualizar la aplicación.'
@@ -47,6 +42,14 @@ const NOTIFICATION_BODY = 'Hubo un problema al actualizar la aplicación.'
 function showNotification () {
   new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
 }
+
+autoUpdater.on('error', message => {
+    showNotification()
+})
+
+
+
+
 const gotTheLock = app.requestSingleInstanceLock()
 
 //Usamos electronDl para descarga directa
