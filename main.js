@@ -14,9 +14,9 @@ const Notification = electron.Notification
 
 const serverUpdate = "https://e-c34-gr6bb22w5-fredy122.vercel.app"
 const feed = `${serverUpdate}/update/${process.platform}/${app.getVersion()}`
-autoUpdater.setFeedURL(feed)
+autoUpdater.setFeedURL(serverUpdate)
 
-
+console.log(serverUpdate);
 setInterval(() => {
     autoUpdater.checkForUpdates()
 }, 60000)
@@ -45,6 +45,7 @@ function showNotification () {
 
 autoUpdater.on('error', message => {
     showNotification()
+    console.log(message);
 })
 
 
