@@ -51,6 +51,13 @@ autoUpdater.on('error', message => {
 
 */
 
+const NOTIFICATION_TITLE = 'Saludo'
+const NOTIFICATION_BODY = 'Hola Bienvenido.'
+
+function showNotification () {
+  new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
+}
+
 
 const gotTheLock = app.requestSingleInstanceLock()
 
@@ -68,6 +75,7 @@ if (!gotTheLock) {
 }else{
     app.on('ready', () => {
         createWindow()
+        showNotification()
     })
 }
 
