@@ -11,7 +11,8 @@ const BrowserWindow = electron.BrowserWindow
 const app = electron.app
 const autoUpdater = electron.autoUpdater
 const Notification = electron.Notification
-
+require('update-electron-app')()
+/*
 const serverUpdate = "https://e-c34-gr6bb22w5-fredy122.vercel.app"
 const feed = `${serverUpdate}/update/${process.platform}/${app.getVersion()}`
 autoUpdater.setFeedURL(feed)
@@ -48,7 +49,7 @@ autoUpdater.on('error', message => {
     console.log(message);
 })
 
-
+*/
 
 
 const gotTheLock = app.requestSingleInstanceLock()
