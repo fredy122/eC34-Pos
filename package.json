@@ -7,7 +7,7 @@
     "node": ">=8.0"
   },
   "scripts": {
-    "start": "set ELECTRON_IS_DEV=0 && electron ."
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   "dependencies": {
     "electron-dl": "^3.3.1",
     "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^5.0.1",
     "node-php-server": "^0.1.2",
     "update-electron-app": "^2.0.1"
   },
