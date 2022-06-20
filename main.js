@@ -12,12 +12,11 @@ const app = electron.app
 const autoUpdater = electron.autoUpdater
 const Notification = electron.Notification
 require('update-electron-app')()
-/*
-const serverUpdate = "https://e-c34-gr6bb22w5-fredy122.vercel.app"
-const feed = `${serverUpdate}/update/${process.platform}/${app.getVersion()}`
-autoUpdater.setFeedURL(feed)
 
-console.log(feed);
+const serverUpdate = 'https://e-c34-pos.vercel.app' 
+const url = `${serverUpdate}/update/${process.platform}/${app.getVersion()}`  
+autoUpdater.setFeedURL({ url })
+
 setInterval(() => {
     autoUpdater.checkForUpdates()
 }, 60000)
@@ -36,26 +35,13 @@ autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
     })
 })
 
-
-const NOTIFICATION_TITLE = 'Error'
-const NOTIFICATION_BODY = 'Hubo un problema al actualizar la aplicación.'
-
-function showNotification () {
-  new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
-}
-
 autoUpdater.on('error', message => {
-    showNotification()
+    new Notification({ title: 'Error', body: message }).show()
     console.log(message);
 })
 
-*/
-
-const NOTIFICATION_TITLE = 'Saludo'
-const NOTIFICATION_BODY = 'Hola Bienvenido.'
-
-function showNotification () {
-  new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
+function showNotification2 () {
+  new Notification({ title: 'Saludo', body: 'Hola Bienvenido.' }).show()
 }
 
 
@@ -75,7 +61,7 @@ if (!gotTheLock) {
 }else{
     app.on('ready', () => {
         createWindow()
-        showNotification()
+        showNotification2()
     })
 }
 

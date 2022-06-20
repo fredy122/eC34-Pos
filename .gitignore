@@ -13,3 +13,4 @@ yarn-error.log
 /windows_installer
 /build_installer.js
 /firma_codigo.pfx
+.vercel
