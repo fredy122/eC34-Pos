@@ -11,3 +11,5 @@ npm-debug.log
 yarn-error.log
 .env
 /windows_installer
+/build_installer.js
+/firma_codigo.pfx
