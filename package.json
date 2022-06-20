@@ -1,7 +1,6 @@
 {
   "name": "eC34-Pedidos",
   "version": "1.0.0",
-  "type": "module",
   "description": "Making laravel desktop application using electron js",
   "main": "main.js",
   "engines": {
