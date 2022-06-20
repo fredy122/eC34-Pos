@@ -14,8 +14,11 @@ const BrowserWindow = electron.BrowserWindow
 const app = electron.app
 const autoUpdater = electron.autoUpdater
 const Notification = electron.Notification
-require('update-electron-app')()
-
+require('update-electron-app')({
+  repo: 'fredy122/eC34-Pos',
+  updateInterval: '1 hour',
+})
+/*
 const serverUpdate = 'https://e-c34-pos.vercel.app' 
 const url = `${serverUpdate}/update/${process.platform}/${app.getVersion()}`  
 autoUpdater.setFeedURL({ url })
@@ -42,7 +45,7 @@ autoUpdater.on('error', message => {
     new Notification({ title: 'Error', body: message }).show()
     console.log(message);
 })
-
+*/
 function showNotification2 () {
   new Notification({ title: 'Saludo', body: 'Hola Bienvenido.' }).show()
 }
