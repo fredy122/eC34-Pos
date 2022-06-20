@@ -107,7 +107,7 @@ function createWindow() {
     const hideSplash = splashscreen({ 
         width: 600, 
         height: 380, 
-        brand: 'Sistema de Pedidos', 
+        brand: 'C34 Pedidos', 
         website: 'Sistema C34', 
         loading: 'Iniciando...', 
         icon: `${__dirname}/assets/icon.ico`, 
