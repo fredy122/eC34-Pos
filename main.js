@@ -107,11 +107,11 @@ function createWindow() {
     const hideSplash = splashscreen({ 
         width: 600, 
         height: 380, 
-        brand: 'Brand', 
-        website: 'Sistema de Pedidos', 
+        brand: 'Sistema de Pedidos', 
+        website: 'Sistema C34', 
         loading: 'Iniciando...', 
         icon: `${__dirname}/assets/icon.ico`, 
-        logo: `${__dirname}/assets/logo.svg` 
+        logo: `${__dirname}/assets/logo.png` 
     });
 
     //pogress de barra 
