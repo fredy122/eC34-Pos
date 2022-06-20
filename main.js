@@ -1,6 +1,9 @@
 const electron = require('electron')
 const path = require('path')
 const electronDl = require('electron-dl');
+
+const splashscreen = require('@electron-native/electron-native-splashscreen');
+
 let progressInterval
 
 var net = require('net');
@@ -101,6 +104,16 @@ function createWindow() {
         resizable: false,
     })
 
+    const hideSplash = splashscreen({ 
+        width: 600, 
+        height: 380, 
+        brand: 'Brand', 
+        website: 'Sistema de Pedidos', 
+        loading: 'Iniciando...', 
+        icon: `${__dirname}/assets/icon.ico`, 
+        logo: `${__dirname}/assets/logo.svg` 
+    });
+
     //pogress de barra 
     /*
     const INCREMENT = 0.03
@@ -124,12 +137,13 @@ function createWindow() {
         clearInterval(progressInterval)
     })
     */
-    
+
     mainWindow.loadURL(serverUrl)
     mainWindow.webContents.once('dom-ready', function () {
-        mainWindow.show()
+        mainWindow.show();
         mainWindow.maximize();
         //mainWindow.webContents.openDevTools()
+        hideSplash.hide();
     });
 
   // Emitted when the window is closed.
