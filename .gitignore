@@ -12,5 +12,6 @@ yarn-error.log
 .env
 /windows_installer
 /build_installer.js
+/eC34-Pedidos-win32-x64
 /firma_codigo.pfx
 .vercel

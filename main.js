@@ -16,7 +16,7 @@ const autoUpdater = electron.autoUpdater
 const Notification = electron.Notification
 require('update-electron-app')({
   repo: 'fredy122/eC34-Pos',
-  updateInterval: '1 hour',
+  updateInterval: '5 minutes',
 })
 /*
 const serverUpdate = 'https://e-c34-pos.vercel.app' 
