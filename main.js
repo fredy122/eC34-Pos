@@ -19,7 +19,7 @@ const { autoUpdater } = require('electron-github-autoupdater');
 const updater = autoUpdater({
     owner: 'fredy122',
     repo: 'eC34-Pos',
-    accessToken: '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',
+    accessToken: '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',
     allowPrerelease: true
 });
 
