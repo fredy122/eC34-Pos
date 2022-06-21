@@ -12,13 +12,37 @@ var server = net.createServer();
 
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
-const autoUpdater = electron.autoUpdater
+//const autoUpdater = electron.autoUpdater
 const Notification = electron.Notification
+const { autoUpdater } = require('electron-github-autoupdater');
+
+const updater = autoUpdater({
+    owner: 'fredy122',
+    repo: 'eC34-Pos',
+    accessToken: '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',
+    allowPrerelease: true
+});
+
+updater.checkForUpdates();
+
+updater.on('error', (msj) => {
+    console.log("Ocurrio un error");
+});
+
+updater.on('checking-for-update', () => {
+    console.log("se ha iniciado una actualización.");
+});
+
+updater.on('update-not-available', () => {
+    console.log("No existe Nueva Version");
+});
+
+/*
 require('update-electron-app')({
   repo: 'fredy122/eC34-Pos',
   updateInterval: '5 minutes',
 })
-/*
+
 const serverUpdate = 'https://e-c34-pos.vercel.app' 
 const url = `${serverUpdate}/update/${process.platform}/${app.getVersion()}`  
 autoUpdater.setFeedURL({ url })
