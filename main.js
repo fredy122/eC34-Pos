@@ -25,16 +25,28 @@ const updater = autoUpdater({
 
 updater.checkForUpdates();
 
-updater.on('error', (msj) => {
-    console.log("Ocurrio un error");
+updater.on('error', (error) => {
+    new Notification({ title: 'Error', body: error }).show()
 });
 
 updater.on('checking-for-update', () => {
-    console.log("se ha iniciado una actualización.");
+    new Notification({ title: 'Actualizando', body: 'se ha iniciado una actualización.' }).show()
+});
+
+updater.on('update-available', (event,releaseNotes,releaseName,releaseDate,updateURL) => {
+    new Notification({ title: 'Respuesta', body: event }).show()
 });
 
 updater.on('update-not-available', () => {
-    console.log("No existe Nueva Version");
+    new Notification({ title: 'Respuesta', body: 'No existe Nueva Version.' }).show()
+});
+
+updater.on('update-downloading', (event) => {
+    new Notification({ title: 'Respuesta', body: event }).show()
+});
+
+updater.on('before-quit-for-update', () => {
+    new Notification({ title: 'Respuesta', body: 'No existe actualizacion.' }).show()
 });
 
 /*
